@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Helping Hands</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Maps Api -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCHoSx4CUYHvy25J2KygnUXH5MtnvvmNbc"></script> -->
+    <!-- Bootstrap CSS/javascript -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <!-- Local styling -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Arimo|Didact+Gothic|Anton|Arvo|Roboto+Slab|Comfortaa:300" rel="stylesheet">
+
+    <!-- Bootstrap jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+        <div>
+            <img src="assets/img/volunteerHands.png" id="bgimg">
+            <a class="navbar-brand" href="#">Helping Hands</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#dropdown1">About Us |</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="#">Register |</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="#">Sign-In</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="section1">
+        <div class="layer">
+        </div>
+        <div id="stuff">
+            <div class="welcome">
+                <h1>Welcome to Helping Hands</h1>
+                <p>A place to connect volunteers with volunteer opportunities</p>
+            </div>
+            <div class="buttons">
+                <a href="./opps.html"><button type="button" class="btn btn-lg greenButton" id="vol">Find Opportunities</button></a>
+                <button type="button" class="btn btn-lg greenButton" id="org">Post Opportunities</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section2">
+
+        <button class="collapsible" id="dropDown1">
+        <i class="fas fa-angle-double-down"></i> About Us
+        </button>
+        <div class="content">   
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin libero lacus, finibus ac leo eget, scelerisque vehicula
+            urna. Vivamus a velit sed diam tristique tincidunt non non ligula. Pellentesque varius erat non ex eleifend sagittis.
+            Pellentesque lacinia dolor in faucibus iaculis. Nullam eu metus leo. Donec metus magna, vulputate vitae sodales
+            vulputate, tincidunt at turpis. Sed maximus suscipit urna eget viverra. Sed vitae consequat velit. Ut vestibulum
+            odio sagittis ipsum venenatis consectetur. Donec sed tempus est.</p>
+        </div>
+
+        <button class="collapsible" id="dropDown2"> <i class="fas fa-angle-double-down"></i>  The Mission</button>
+        <div class="content" id="collapse1">   
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin libero lacus, finibus ac leo eget, scelerisque vehicula
+            urna. Vivamus a velit sed diam tristique tincidunt non non ligula. Pellentesque varius erat non ex eleifend sagittis.
+            Pellentesque lacinia dolor in faucibus iaculis. Nullam eu metus leo. Donec metus magna, vulputate vitae sodales
+            vulputate, tincidunt at turpis. Sed maximus suscipit urna eget viverra. Sed vitae consequat velit. Ut vestibulum
+            odio sagittis ipsum venenatis consectetur. Donec sed tempus est.</p>
+        </div>
+        
+ 
+        <button class="collapsible" id="dropDown3"> <i class="fas fa-angle-double-down"></i>  Frequently Asked Questions</button>
+        <div class="content" id="collapse2">   
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin libero lacus, finibus ac leo eget, scelerisque vehicula
+            urna. Vivamus a velit sed diam tristique tincidunt non non ligula. Pellentesque varius erat non ex eleifend sagittis.
+            Pellentesque lacinia dolor in faucibus iaculis. Nullam eu metus leo. Donec metus magna, vulputate vitae sodales
+            vulputate, tincidunt at turpis. Sed maximus suscipit urna eget viverra. Sed vitae consequat velit. Ut vestibulum
+            odio sagittis ipsum venenatis consectetur. Donec sed tempus est.</p>
+        </div>
+
+        <button class="collapsible" id="dropDown4"> <i class="fas fa-angle-double-down"></i>  Contact Us</button>
+        <div class="content" id="collapse3">   
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin libero lacus, finibus ac leo eget, scelerisque vehicula
+            urna. Vivamus a velit sed diam tristique tincidunt non non ligula. Pellentesque varius erat non ex eleifend sagittis.
+            Pellentesque lacinia dolor in faucibus iaculis. Nullam eu metus leo. Donec metus magna, vulputate vitae sodales
+            vulputate, tincidunt at turpis. Sed maximus suscipit urna eget viverra. Sed vitae consequat velit. Ut vestibulum
+            odio sagittis ipsum venenatis consectetur. Donec sed tempus est.</p>
+        </div>
+
+    </div>
+
+
+    <!--Volunteer Modal-->
+
+    <!--<div class="modal" tabindex="-1" role="dialog" id="volModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Let us know who you are</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form role="form" id="sign-up-form">
+                        <div class="form-group row">
+                            <label for="name-input">Name:</label>
+                            <input class="form-control" id="name-input" type="text" placeholder="enter your name" required>
+                        </div>
+                        <div class="form-group row">
+                            <label for="email-input">Email:</label>
+                            <input class="form-control" id="email-input" type="email" placeholder="enter your e-mail" required>
+                        </div>
+                        <div class="form-group row">
+                            <label for="zipcode-input">Zipcode:</label>
+                            <input class="form-control" id="zipcode-input" type="number" placeholder="enter your zipcode" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    Organization Modal -->
+
+    <div class="modal" tabindex="-1" role="dialog" id="orgModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign In</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form role="form" id="sign-up-form">
+                        <div class="form-group row">
+                            <label for="name-input">Organization Name:</label>
+                            <input class="form-control" id="name-input" type="text" placeholder="enter your name" required>
+                        </div>
+                        <div class="form-group row">
+                            <label for="email-input">Email:</label>
+                            <input class="form-control" id="email-input" type="email" placeholder="enter your e-mail" required>
+                        </div>
+                        <div class="form-group row">
+                            <label for="zipcode-input">Zipcode:</label>
+                            <input class="form-control" id="zipcode-input" type="number" placeholder="enter your zipcode" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="assets/javascript/javascript.js"></script></script>
+</html>
