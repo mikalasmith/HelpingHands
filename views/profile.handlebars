@@ -1,0 +1,26 @@
+{{> header }}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">{{title}}</h1>
+            <h2 class="display-5">Here is your information</h2>
+                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4"></div>
+                <p>Your user name is: <b>{{username}}</b></p>
+                <p>Your email is: <b>{{email}}</b></p>
+                 {{#each arr}}
+                <div class="alert alert-primary" role="alert">
+                
+                 <h3 class="alert-heading">Opportunity # {{this.count}}</h3>
+                <p>{{orgname}}</p>
+                <p>{{date}}</p>
+                <p>{{numvol}}</p>
+                <p>{{address}}</p>
+                <p>{{city}}</p>
+                <p>{{state}}</p>
+                <p>{{zipcode}}</p>
+                <p>{{description}}</p>
+                </div>
+                {{/each}}
+                </div>
+                </div>
+                    
+        </div>

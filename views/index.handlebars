@@ -1,0 +1,60 @@
+{{> header }}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">{{title}}</h1>
+            {{#if errors}}
+              {{#each errors}}
+              
+              <div class="alert alert-danger">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                {{this.msg}}
+              </div>
+              {{/each}}
+            {{/if}}
+        </div>
+        <div class="container">
+            <div class="row">
+                
+
+
+            <div class="col>">
+                <form method="POST" action="registration" class="needs-validation" novalidate>
+                  <div class="form-group">
+                        <label for="validationUserName">User name</label>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="User name">
+                        <div class="valid-feedback">
+                                Looks good!
+                              </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="validationEmail1">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        <div class="valid-feedback">
+                                Looks good!
+                              </div>
+                    </div>
+                    
+                    <div class="form-group">
+                            <label for="validationPassword">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                            <div class="valid-feedback">
+                                    Looks good!
+                                  </div>
+                        </div>
+                        <div class="form-group">
+                                <label for="validationreenterPassword">Re-Enter Password</label>
+                                <input type="password" class="form-control" id="reenterPassword" name="passwordMatch" placeholder="Password">
+                            </div>
+                    <button type="submit" class="btn btn-primary" id="userSubmit">Submit</button>
+                    <div class="valid-feedback">
+                            Looks good!
+                          </div>
+                </form>
+            </div>
+        </div>
+
+        </div>
+
+    </div>
+
