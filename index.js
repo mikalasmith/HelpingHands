@@ -21,6 +21,7 @@ var options = {
     formatter: null // 'gpx', 'string', ...
 };
 var geocoder = NodeGeocoder(options);
+
 app.use(bodyParser.urlencoded({
     extended: true
 }));
