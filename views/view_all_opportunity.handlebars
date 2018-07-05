@@ -29,44 +29,62 @@
 
 <div class="container-fluid">
 
-<div class="search1">
-<div class="row">
-    <div class="back">
-    <div class="col-sm-12">
-        <h3>Where do you want to volunteer?</h3>
-        <h5>See all posted opportunities below</h5>
-    </div>
-    </div>
-</div>
-</div>
-
-{{#each arr}}
-  <div class="event">
-      <div class="row">
-          <div class="col-sm"><h4>{{this.orgname}}</h4></div>
-          <div class="col-sm"><p>{{this.date}}</p></div>
-          <div class="col-sm"><p>{{this.address}} , {{this.city}} , {{this.state}}</p></div>
-          <div class="col-sm"><p>{{this.description}}</p></div>
-          <div class="col-sm"><button type="submit" class="btn btn-lg signUp greenButton signupOpportunity" datat-OpportunityNumber="{{count}}" data-userID="{{user_id}}" data-idOpportunity="{{id}}">Sign Up!</button></div>
+  <div class="search1">
+    <div class="row">
+      <div class="back">
+        <div class="col-sm-12">
+          <h3>Where do you want to volunteer?</h3>
+          <h5>See all posted opportunities below</h5>
+        </div>
       </div>
+    </div>
   </div>
-{{/each}}
+
+  {{#each arr}}
+  <div class="event">
+    <div class="row">
+      <div class="col-sm-2">
+        <h4>{{this.orgname}}</h4>
+      </div>
+      <div class="col-sm-2">
+        <p>{{this.date}}</p>
+      </div>
+      <div class="col-sm-2">
+        <p>{{this.address}} , {{this.city}} , {{this.state}}</p>
+      </div>
+      <div class="col-sm-2">
+        <p>{{this.description}}</p>
+      </div>
+      <div class="col-sm-2">
+        <button type="submit" class="btn btn-lg signUp greenButton signupOpportunity" datat-OpportunityNumber="{{count}}" data-userID="{{user_id}}"
+          data-idOpportunity="{{id}}">Sign Up!</button>
+      </div>
+      <div class ="col-sm-2" id="mapWrapper">
+        <button class="btn btn-lg signUp greenButton map" onclick="toggleMap()">Map</button>
+        <div id="mapBox">
+          <div id="mapContent">Map Content</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  {{/each}}
 </div>
 
 <script>
-  $(".signupOpportunity").on("click", function(){
-    var idOpportunity =  $(this).attr("data-idOpportunity");
+  $(".signupOpportunity").on("click", function () {
+    var idOpportunity = $(this).attr("data-idOpportunity");
     var userID = $(this).attr("data-userID");
     var OpportunityNumber = $(this).attr("datat-OpportunityNumber");
     var userSignUp = {
-      idOpportunity:idOpportunity,
+      idOpportunity: idOpportunity,
       userID: userID
     }
     console.log(userSignUp)
     $.ajax("/signupOpportunity", {
       type: "POST",
       data: userSignUp
-    }).then(function(){
+    }).then(function () {
       alert("Congrats! You signed up for Opportunity #" + OpportunityNumber)
       location.replace("/profile")
     })

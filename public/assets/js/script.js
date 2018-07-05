@@ -1,16 +1,18 @@
-$(window).load(function(){
-    var title = document.getElementsByClassName("display-4")[0].innerText;
-    console.log(title);
-    var element = document.getElementById("submit_form");
-    var element2 = document.getElementById("orgSubmit");
-    if (title === "Your request sent successfully"){
-        element.classList.add("dispaynone");
-        element2.classList.remove("dispaynone");
-    }
-})
+// $(window).load(function(){
+//     var title = document.getElementsByClassName("display-4")[0].innerText;
+//     console.log(title);
+//     var element = document.getElementById("submit_form");
+//     var element2 = document.getElementById("orgSubmit");
+//     if (title === "Your request sent successfully"){
+//         element.classList.add("dispaynone");
+//         element2.classList.remove("dispaynone");
+//     }
+// })
+
 
 var coll = document.getElementsByClassName("collapsible");
 var i;
+
 
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
@@ -22,4 +24,15 @@ for (i = 0; i < coll.length; i++) {
       content.style.display = "block";
     }
   });
+}
+
+function toggleMap(){
+	var mapBox = document.getElementById("mapBox");
+	if(mapBox.style.opacity == 1){
+		mapBox.style.opacity = 0;
+		mapBox.style.right = "-260px"; // remove it from active screen space
+	} else {
+		mapBox.style.right = "0px"; // return it to active screen space
+		mapBox.style.opacity = 1;
+	}
 }
