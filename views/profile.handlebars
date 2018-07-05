@@ -1,5 +1,5 @@
 {{> header }}
-        <!--<div class="container-fluid">
+<!--<div class="container-fluid">
             <h1 class="display-4">{{title}}</h1>
             <h2 class="display-5">Here is your information</h2>
                   <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4"></div>
@@ -23,10 +23,12 @@
                 </div>-->
 <div class="container-fluid">
     <div class="userWelcome">
-            <div class="row">
-                <div class="back">
+        <div class="row">
+            <div class="back">
                 <div class="col-sm-12">
-                    <h2>Hello, <span style="color: #ffbd4a">{{username}}</span></h2>
+                    <h2>Hello,
+                        <span style="color: #ffbd4a">{{username}}</span>
+                    </h2>
                     <div class="row">
                         <div class="col-6 col-sm-4">
                             <p>{{email}}</p>
@@ -34,19 +36,34 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    {{#each arr}}
+    <div class="userEvent">
+        <div class="row">
+            <div class="col-sm-2">
+                <h4>{{orgname}}</h4>
+            </div>
+            <div class="col-sm-2">
+                <p>{{date}}</p>
+            </div>
+            <div class="col-sm-2">
+                <p>{{city}} {{state}}</p>
+            </div>
+            <div class="col-sm-2">
+                <button type="button" class="btn btn-lg signUp greenButton">Your're Signed Up!</button>
+            </div>
+            <div class="col-sm-4" id="mapWrapper">
+                <button class="btn btn-lg signUp greenButton map" onclick="toggleMap()">Map</button>
+                <div id="mapBox">
+                    <div id="mapContent">Map Content</div>
                 </div>
             </div>
-    </div>
-    
-{{#each arr}} 
-    <div class="userEvent">   
-        <div class="row">
-            <div class="col-sm"><h4>{{orgname}}</h4></div>
-            <div class="col-sm"><p>{{date}}</p></div>
-            <div class="col-sm"><p>{{city}}  {{state}}</p></div>
-            <div class="col-sm"><button type="button" class="btn btn-lg signUp greenButton">Your're Signed Up!</button></div>
         </div>
-    </div> 
+
+    </div>
     {{/each}}
 </div>
-</div>    
+</div>

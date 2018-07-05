@@ -319,3 +319,19 @@ a:hover
       color: #ffbd4a;
   }
 
+/* Map box styling on the view_all_opportunity page */
+#mapBox{
+	position: absolute;
+	right: -260px;
+	top: 50px;
+	width: 260px;
+	height: 400px;
+	background: #333;
+	opacity: 0;
+	/* transition: opacity 0.3s linear 0s, right 0s linear 0s; */
+	cursor: pointer;
+}
+
+#mapWrapper{
+    position: relative;
+}
