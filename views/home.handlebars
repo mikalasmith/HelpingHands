@@ -1,83 +1,170 @@
 {{> header }}
 
-    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-      <h1 class="display-4">Volorg</h1>
-      <p class="lead">Please select who you <area shape="circle" coords="" href="" alt=""></p>
-    </div>
 
-    <div class="container">
-      <div class="card-deck mb-3 text-center">
-        <div class="card mb-4 box-shadow">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Volunteer</h4>
-          </div>
-          <div class="card-body">
-            <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
-            <ul class="list-unstyled mt-3 mb-4">
-            
-            </ul>
-            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
-          </div>
+
+<div class="container" id="mainbg">
+  <div class="layer">
+  </div>
+  <div class="holder">
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center btn-box">
+      <h1 class="display-6 text-primary">Welcome to Helping Hands</h1>
+      <p class="lead">a place to connect volunteers with volunteer opportunities
+        <area shape="circle" coords="" href="" alt="">
+      </p>
+      <button type="button" class="btn btn-success adjust-btn btn-lg" id="find-btn">find opportunities</button>
+      <button type="button" class="btn btn-success adjust-btn btn-lg">post opportunities</button>
+    </div>
+  </div>
+</div>
+
+<div class="siteDetails">
+
+  <button class="collapsible" id="dropDown1">
+    <i class="fas fa-chevron-circle-down"></i> About Us</button>
+  <div class="content" id="collapse1">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin libero lacus, finibus ac leo eget, scelerisque vehicula
+      urna. Vivamus a velit sed diam tristique tincidunt non non ligula. Pellentesque varius erat non ex eleifend sagittis.
+      Pellentesque lacinia dolor in faucibus iaculis. Nullam eu metus leo. Donec metus magna, vulputate vitae sodales vulputate,
+      tincidunt at turpis. Sed maximus suscipit urna eget viverra. Sed vitae consequat velit. Ut vestibulum odio sagittis
+      ipsum venenatis consectetur. Donec sed tempus est.</p>
+  </div>
+
+  <button class="collapsible" id="dropDown2">
+    <i class="fas fa-chevron-circle-down"></i> The Mission</button>
+  <div class="content" id="collapse2">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin libero lacus, finibus ac leo eget, scelerisque vehicula
+      urna. Vivamus a velit sed diam tristique tincidunt non non ligula. Pellentesque varius erat non ex eleifend sagittis.
+      Pellentesque lacinia dolor in faucibus iaculis. Nullam eu metus leo. Donec metus magna, vulputate vitae sodales vulputate,
+      tincidunt at turpis. Sed maximus suscipit urna eget viverra. Sed vitae consequat velit. Ut vestibulum odio sagittis
+      ipsum venenatis consectetur. Donec sed tempus est.</p>
+  </div>
+
+
+  <button class="collapsible" id="dropDown3">
+    <i class="fas fa-chevron-circle-down"></i> Frequently Asked Questions</button>
+  <div class="content" id="collapse3">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin libero lacus, finibus ac leo eget, scelerisque vehicula
+      urna. Vivamus a velit sed diam tristique tincidunt non non ligula. Pellentesque varius erat non ex eleifend sagittis.
+      Pellentesque lacinia dolor in faucibus iaculis. Nullam eu metus leo. Donec metus magna, vulputate vitae sodales vulputate,
+      tincidunt at turpis. Sed maximus suscipit urna eget viverra. Sed vitae consequat velit. Ut vestibulum odio sagittis
+      ipsum venenatis consectetur. Donec sed tempus est.</p>
+  </div>
+
+  <button class="collapsible" id="dropDown4">
+    <i class="fas fa-chevron-circle-down"></i> Contact Us</button>
+  <div class="content" id="collapse4">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin libero lacus, finibus ac leo eget, scelerisque vehicula
+      urna. Vivamus a velit sed diam tristique tincidunt non non ligula. Pellentesque varius erat non ex eleifend sagittis.
+      Pellentesque lacinia dolor in faucibus iaculis. Nullam eu metus leo. Donec metus magna, vulputate vitae sodales vulputate,
+      tincidunt at turpis. Sed maximus suscipit urna eget viverra. Sed vitae consequat velit. Ut vestibulum odio sagittis
+      ipsum venenatis consectetur. Donec sed tempus est.</p>
+  </div>
+
+  {{!--
+  <div class="container">
+    {{!--
+    <div class="card-deck mb-3 text-center">
+      <div class="card mb-4 box-shadow">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal">Volunteer</h4>
         </div>
-        <div class="card mb-4 box-shadow">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal">NON Profit </h4>
-          </div>
-          <div class="card-body">
-            <h1 class="card-title pricing-card-title">$9.99 <small class="text-muted">/ mo</small></h1>
-            <ul class="list-unstyled mt-3 mb-4">
-              
-            </ul>
-            <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
-          </div>
-        </div>
-        <div class="card mb-4 box-shadow">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Organization</h4>
-          </div>
-          <div class="card-body">
-            <h1 class="card-title pricing-card-title">$19.99 <small class="text-muted">/ mo</small></h1>
-            <ul class="list-unstyled mt-3 mb-4">
-             
-            </ul>
-            <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
-          </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">$0
+            <small class="text-muted">/ mo</small>
+          </h1>
+          <ul class="list-unstyled mt-3 mb-4">
+
+          </ul>
+          <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
         </div>
       </div>
-
-      <footer class="pt-4 my-md-5 pt-md-5 border-top">
-        <div class="row">
-          <div class="col-12 col-md">
-            <img class="mb-2" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
-            <small class="d-block mb-3 text-muted">&copy; 2017-2018</small>
-          </div>
-          <div class="col-6 col-md">
-            <h5>Features</h5>
-            <ul class="list-unstyled text-small">
-              <li><a class="text-muted" href="#">Cool stuff</a></li>
-              <li><a class="text-muted" href="#">Random feature</a></li>
-              <li><a class="text-muted" href="#">Team feature</a></li>
-              <li><a class="text-muted" href="#">Stuff for developers</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md">
-            <h5>Resources</h5>
-            <ul class="list-unstyled text-small">
-              <li><a class="text-muted" href="#">Resource</a></li>
-              <li><a class="text-muted" href="#">Resource name</a></li>
-              <li><a class="text-muted" href="#">Another resource</a></li>
-              <li><a class="text-muted" href="#">Final resource</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md">
-            <h5>About</h5>
-            <ul class="list-unstyled text-small">
-              <li><a class="text-muted" href="#">Team</a></li>
-              <li><a class="text-muted" href="#">Locations</a></li>
-              <li><a class="text-muted" href="#">Privacy</a></li>
-              <li><a class="text-muted" href="#">Terms</a></li>
-            </ul>
-          </div>
+      <div class="card mb-4 box-shadow">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal">NON Profit </h4>
         </div>
-      </footer>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">$9.99
+            <small class="text-muted">/ mo</small>
+          </h1>
+          <ul class="list-unstyled mt-3 mb-4">
+
+          </ul>
+          <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+        </div>
+      </div>
+      <div class="card mb-4 box-shadow">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal">Organization</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">$19.99
+            <small class="text-muted">/ mo</small>
+          </h1>
+          <ul class="list-unstyled mt-3 mb-4">
+
+          </ul>
+          <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+        </div>
+      </div>
     </div>
+
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+      <div class="row">
+        <div class="col-12 col-md">
+          <img class="mb-2" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
+          <small class="d-block mb-3 text-muted">&copy; 2017-2018</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Features</h5>
+          <ul class="list-unstyled text-small">
+            <li>
+              <a class="text-muted" href="#">Cool stuff</a>
+            </li>
+            <li>
+              <a class="text-muted" href="#">Random feature</a>
+            </li>
+            <li>
+              <a class="text-muted" href="#">Team feature</a>
+            </li>
+            <li>
+              <a class="text-muted" href="#">Stuff for developers</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Resources</h5>
+          <ul class="list-unstyled text-small">
+            <li>
+              <a class="text-muted" href="#">Resource</a>
+            </li>
+            <li>
+              <a class="text-muted" href="#">Resource name</a>
+            </li>
+            <li>
+              <a class="text-muted" href="#">Another resource</a>
+            </li>
+            <li>
+              <a class="text-muted" href="#">Final resource</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>About</h5>
+          <ul class="list-unstyled text-small">
+            <li>
+              <a class="text-muted" href="#">Team</a>
+            </li>
+            <li>
+              <a class="text-muted" href="#">Locations</a>
+            </li>
+            <li>
+              <a class="text-muted" href="#">Privacy</a>
+            </li>
+            <li>
+              <a class="text-muted" href="#">Terms</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer> --}}
+  </div>
