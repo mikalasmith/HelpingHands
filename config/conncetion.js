@@ -9,7 +9,8 @@ var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
-    password: "Char52591", 
+
+    password: "mytime123", 
     database:"volorg"
 });
 };

@@ -1,4 +1,4 @@
-#navbarNav{
+/*#navbarNav{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -10,7 +10,7 @@
     font-family: 'Comfortaa', cursive;
     color: blue;
     
-}
+}*/
 
 .section1{
     background: url("../img/teamwork.jpg");
@@ -86,12 +86,12 @@
     
 } 
 
-.navbar{
+/*.navbar{
     margin: auto;
     width: 100%;
     background-color:white;
     height: 100px;
-}
+}*/
 
 body{
     font-family: 'Arimo', sans-serif;
@@ -208,3 +208,114 @@ body{
     font-size: 18px;
     box-shadow: 0 4px 2px -2px #cccccc;
 }
+
+
+/* styles the navbar */
+.navbar{
+    margin: auto;
+    width: 100%;
+    background-color:white;
+    height: 79px;
+
+    
+}
+ 
+#site-name{
+    font-family: sans-serif;
+}
+
+/* styles the bg image and the thin gray layer thats over it  */
+
+#mainbg{
+    background-image: url("/assets/img/teamwork.jpg");
+    background-repeat: no-repeat;
+    min-height: 675px;
+    min-width:100%;
+    background-position: 35% 70%; 
+}
+
+.layer {
+    background-color: rgba(248, 247, 216, 0.548);
+    position: absolute;
+    top: 95px;
+    left: 0;
+    width: 100%;
+    height: 675px;
+    opacity: 0.1;
+}
+
+/* styles the welcome box on the homepage */
+.btn-box{
+    z-index: 10;
+    text-align: center;
+    width: 45%;
+    border-radius: 25px;
+    background-color: white;
+    background-size: 10%;
+    opacity:.9;
+}
+
+.holder{
+    padding-top: 15%;
+}
+
+#find-btn{
+    margin-right: 3%;
+   
+}
+
+a { 
+    color: inherit; 
+    text-decoration: none;
+   
+}
+
+a:hover 
+{
+    color: inherit;
+    text-decoration:none; 
+    cursor:pointer;  
+}
+
+
+.adjust-btn{
+    margin-bottom: 5%;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .collapsible:hover {
+    background-color: #ccc;
+  }
+  
+  /* Style the collapsible content. Note: hidden by default */
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }
+
+  .collapsible {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    color: black;
+    font-size: 20px;
+  }
+
+  .fas {
+      margin-right: 1%;
+      color: #ffbd4a;
+  }
+

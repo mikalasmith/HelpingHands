@@ -21,6 +21,7 @@ var options = {
     formatter: null // 'gpx', 'string', ...
 };
 var geocoder = NodeGeocoder(options);
+
 app.use(bodyParser.urlencoded({
     extended: true
 }));
@@ -31,7 +32,8 @@ var options = {
     host: 'localhost',
     port: 3306,
     user: 'root',
-    password: 'Char52591',
+
+    password: '',
     database: 'volorg'
 };
 var sessionStore = new MySQLStore(options);
