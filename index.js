@@ -31,7 +31,14 @@ app.use(expressValidator());
 app.use(cookieParser());
 
 if (process.env.JAWSDB_URL){
-    var options = process.env.JAWSDB_URL;
+    var options = {
+        port: 3306,
+        host: "g8mh6ge01lu2z3n1.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+        user: "t5r7oqhkxtaryzbo",
+        password: "aq8dlscmhcva99gz",
+        database: "h0glcjw1dqi4evhz",
+
+    };
 } else{
     // var options = {
     //     root: 3306,
