@@ -33,7 +33,7 @@ app.use(cookieParser());
 if (process.env.JAWSDB_URL){
     var options = {
         port: 3306,
-        host: process.env.JAWSDB_PORT,
+        host: process.env.JAWSDB_HOST,
         user: process.env.JAWSDB_USER,
         password: process.env.JAWSDB_PW,
         database: process.env.JAWSDB_DB,
