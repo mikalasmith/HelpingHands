@@ -31,17 +31,20 @@ app.use(expressValidator());
 app.use(cookieParser());
 
 if (process.env.JAWSDB_URL){
+    console.log("jaws")
     var options = process.env.JAWSDB_URL;
 } else{
-var options = {
-    root: 3306,
-    host: "localhost",
-    user: "root",
-    password: process.env.password,
-    database: "volorg",
+    console.log("not jaws")
+    var options = {
+        root: 3306,
+        host: "localhost",
+        user: "root",
+        password: process.env.password,
+        database: "volorg",
 
-};
+    };
 }
+
 var sessionStore = new MySQLStore(options);
 app.use(session({
     secret: 'ghfghdf',

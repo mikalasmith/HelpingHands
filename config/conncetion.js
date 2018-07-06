@@ -3,9 +3,11 @@ require('dotenv').config();
 
 var connection
 if (process.env.JAWSDB_URL){
+    console.log("connection jaws")
     connection = mysql.createConnection(process.env.JAWSDB_URL);
 }
 else{
+    console.log("connection not jaws")
 var connection = mysql.createConnection({
     root: 3306,
     host: "localhost",
