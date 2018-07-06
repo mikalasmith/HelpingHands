@@ -69,7 +69,12 @@ app.engine("handlebars", exphbs({
 app.set("view engine", "handlebars");
 require("dotenv").config();
 app.use(function (req, res, next) {
-    res.locals.isAuthenticated = req.isAuthenticated();
+    try {
+        res.locals.isAuthenticated = req.isAuthenticated();
+    } catch (e){
+        console.log(e)
+    }
+    
     next()
 })
 passport.use(new LocalStrategy(
