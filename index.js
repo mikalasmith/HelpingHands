@@ -33,30 +33,21 @@ app.use(cookieParser());
 if (process.env.JAWSDB_URL){
     var options = {
         port: 3306,
-        host: "g8mh6ge01lu2z3n1.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-        user: "t5r7oqhkxtaryzbo",
-        password: "aq8dlscmhcva99gz",
-        database: "h0glcjw1dqi4evhz",
+        host: process.env.JAWSDB_PORT,
+        user: process.env.JAWSDB_USER,
+        password: process.env.JAWSDB_PW,
+        database: process.env.JAWSDB_DB,
 
     };
 } else{
-    // var options = {
-    //     root: 3306,
-    //     host: "localhost",
-    //     user: "root",
-    //     password: process.env.password,
-    //     database: "volorg",
-
-    // };
     var options = {
-        port: 3306,
-        host: "g8mh6ge01lu2z3n1.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-        user: "t5r7oqhkxtaryzbo",
-        password: "aq8dlscmhcva99gz",
-        database: "h0glcjw1dqi4evhz",
+        root: 3306,
+        host: "localhost",
+        user: "root",
+        password: process.env.password,
+        database: "volorg",
 
     };
-    
 }
 
 var sessionStore = new MySQLStore(options);
@@ -76,12 +67,7 @@ app.engine("handlebars", exphbs({
 app.set("view engine", "handlebars");
 require("dotenv").config();
 app.use(function (req, res, next) {
-    try {
-        res.locals.isAuthenticated = req.isAuthenticated();
-    } catch (e){
-        console.log(e)
-    }
-    
+    res.locals.isAuthenticated = req.isAuthenticated();
     next()
 })
 passport.use(new LocalStrategy(
