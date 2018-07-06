@@ -21,6 +21,7 @@ var options = {
     formatter: null // 'gpx', 'string', ...
 };
 var geocoder = NodeGeocoder(options);
+require('dotenv').config();
 
 app.use(bodyParser.urlencoded({
     extended: true
@@ -33,7 +34,7 @@ var options = {
     port: 3306,
     user: 'root',
 
-    password: 'mytime123',
+    password: process.env.password,
     database: 'volorg'
 };
 var sessionStore = new MySQLStore(options);

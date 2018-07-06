@@ -47,15 +47,8 @@
     justify-content: center;
 }
 
-#vol{
+.vol{
     margin-right: 10px;
-    background: limegreen;
-    font-family: 'Comfortaa', cursive;
-    
-}
-
-#org{
-    margin-left: 10px;
     background: limegreen;
     font-family: 'Comfortaa', cursive;
     
@@ -83,7 +76,6 @@
     background-color: white;
     background-size: 10%;
     opacity:.9
-    
 } 
 
 /*.navbar{
@@ -101,7 +93,7 @@ body{
     display: inline-block;
     text-decoration: none;
     color: white;
-    padding: 10px 50px;
+    padding: 10px 10px;
     font-size: 18px;
     box-shadow: 0 4px 2px -2px gray;
 }
@@ -192,6 +184,7 @@ body{
 }
 
 .signUp{
+    position: absolute;
     margin-right: 10px;
     background: limegreen;
     font-family: 'Comfortaa', cursive;
@@ -253,6 +246,7 @@ body{
     background-color: white;
     background-size: 10%;
     opacity:.9;
+    min-width: 350px;
 }
 
 .holder{
@@ -329,7 +323,7 @@ a:hover
 	background: #333;
 	opacity: 0;
 	/* transition: opacity 0.3s linear 0s, right 0s linear 0s; */
-	cursor: pointer;
+    cursor: pointer;
 }
 
 #mapWrapper{
