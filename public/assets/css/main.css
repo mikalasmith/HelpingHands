@@ -321,12 +321,33 @@ a:hover
 	width: 260px;
 	height: 400px;
 	background: #333;
-	opacity: 0;
+	opacity: 1;
 	/* transition: opacity 0.3s linear 0s, right 0s linear 0s; */
     cursor: pointer;
+  z-index: 99;
 }
 
 #mapWrapper{
     position: relative;
-    z-index: 2;
 }
+
+.dispaynone {
+    display: none;
+    }
+    .visit{
+        text-decoration: none;
+        color: aliceblue;
+    }
+    .map {
+        height: 450px;
+        width: 100%;
+      }
+    
+    #map {
+        height: 450px;
+        width: 100%;
+      }
+      #map2 {
+        height: 450px;
+        width: 100%;
+      }
