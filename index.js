@@ -29,6 +29,10 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 app.use(expressValidator());
 app.use(cookieParser());
+
+if (process.env.JAWSDB_URL){
+    var options = process.env.JAWSDB_URL;
+} else{
 var options = {
     host: 'localhost',
     port: 3306,
@@ -37,6 +41,7 @@ var options = {
     password: process.env.password,
     database: 'volorg'
 };
+}
 var sessionStore = new MySQLStore(options);
 app.use(session({
     secret: 'ghfghdf',
