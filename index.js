@@ -33,14 +33,23 @@ app.use(cookieParser());
 if (process.env.JAWSDB_URL){
     var options = process.env.JAWSDB_URL;
 } else{
+    // var options = {
+    //     root: 3306,
+    //     host: "localhost",
+    //     user: "root",
+    //     password: process.env.password,
+    //     database: "volorg",
+
+    // };
     var options = {
-        root: 3306,
-        host: "localhost",
-        user: "root",
-        password: process.env.password,
-        database: "volorg",
+        port: 3306,
+        host: "g8mh6ge01lu2z3n1.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+        user: "t5r7oqhkxtaryzbo",
+        password: "aq8dlscmhcva99gz",
+        database: "h0glcjw1dqi4evhz",
 
     };
+    
 }
 
 var sessionStore = new MySQLStore(options);
@@ -51,7 +60,6 @@ app.use(session({
     store: sessionStore
     // cookie: { secure: true }
 }));
-console.log("got this far")
 app.use(passport.initialize());
 app.use(passport.session());
 var exphbs = require("express-handlebars");
