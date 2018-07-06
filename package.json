@@ -27,6 +27,7 @@
     "express-mysql-session": "^2.0.0",
     "express-session": "^1.15.6",
     "express-validator": "^5.2.0",
+    "geocoder": "^0.2.3",
     "hbs": "^4.0.1",
     "mysql": "^2.15.0",
     "node-geocoder": "^3.22.0",

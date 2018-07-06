@@ -39,6 +39,7 @@ var options = {
     user: "root",
     password: process.env.password,
     database: "volorg",
+
 };
 }
 var sessionStore = new MySQLStore(options);

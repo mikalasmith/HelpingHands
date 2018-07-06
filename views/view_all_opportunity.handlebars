@@ -1,31 +1,5 @@
 {{> header }}
-<!--<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">{{title}}</h1>
-    <div class="row">
-      
-               <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
-                {{#each arr}}
-                
-                 <div class="alert alert-primary" role="alert">
-                <h3 class="alert-heading">opportunity # {{this.count}}</h3>
-                <p>{{this.orgname}}</p>
-                <p>{{this.date}}</p>
-                <p>{{this.numvol}}</p>
-                <p>{{this.address}}</p>
-                <p>{{this.city}}</p>
-                <p>{{this.state}}</p>
-                <p>{{this.zipcode}}</p>
-                <p>{{this.description}}</p>
-                <p >ID: <span>{{id}}</span></p>
-                <button type="submit" class="btn btn-primary signupOpportunity" datat-OpportunityNumber="{{count}}" data-userID="{{user_id}}" data-idOpportunity="{{id}}">sign up for this opportunity</button>
-                </div>
-                {{/each}}
-              </div>
-  </div>
-</div>
-</div>
-</div>-->
+
 
 <div class="container-fluid">
 
@@ -60,9 +34,8 @@
           data-idOpportunity="{{id}}">Sign Up!</button>
       </div>
       <div class ="col-sm-2" id="mapWrapper">
-        <button class="btn btn-lg signUp greenButton map" onclick="toggleMap()">Map</button>
-        <div id="mapBox">
-          <div id="mapContent">Map Content</div>
+        <button class="btn btn-lg signUp greenButton view" data-id="{{id}}" data-address="{{this.address}} {{this.city}} {{this.state}}" type="button" value="Geocode" onclick="toggleMap()">Map</button>
+        {{!-- <div data-address="{{this.address}} class="map dispaynone""> --}}
         </div>
       </div>
 
@@ -91,4 +64,60 @@
 
 
   })
-</script>
+
+    
+    function initMap() {
+    var count = 0;
+    $(".view").on ("click", function(){
+      
+      if(count == 0){
+      var geocoder = new google.maps.Geocoder();
+      var divName = '<div id="mapBox">'
+      var name='mapBox';
+      $(this).closest("div").append($(divName));
+      $("#mapBox").css(
+        "opacity", "1", 
+      )
+      $("#mapBox").css(
+        "right", "0px"
+      )
+      var map = new google.maps.Map(document.getElementById(name), {
+      zoom: 11,
+      center: {lat: 35.2271, lng: -80.8431}
+      //centered on Charlotte NC
+      //});
+      })
+      var address=$(this).data("address");
+      geocodeAddress(geocoder, map, address)
+      count = 1
+      }
+    else
+      {
+        $("#mapBox").remove();
+        count = 0;
+      }
+    })
+   }
+
+  function geocodeAddress(geocoder, resultsMap, address) {
+    //var address = document.getElementById('address').value;
+    geocoder.geocode({'address': address}, function(results, status) {
+      if (status === 'OK') {
+        resultsMap.setCenter(results[0].geometry.location);
+        var marker = new google.maps.Marker({
+          map: resultsMap,
+          position: results[0].geometry.location
+        });
+      } else {
+        alert('Geocode was not successful for the following reason: ' + status);
+      }
+    });
+  }
+$(".hide").on("click", function(){
+  $( "#map2" ).remove();
+  $(".map").addClass("dispaynone")
+})
+
+
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWPe4weCAWZO2rLMMGIR_Bm-o7y4WmZrs&callback=initMap"></script>
