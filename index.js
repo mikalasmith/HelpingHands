@@ -21,6 +21,7 @@ var options = {
     formatter: null // 'gpx', 'string', ...
 };
 var geocoder = NodeGeocoder(options);
+require('dotenv').config();
 
 app.use(bodyParser.urlencoded({
     extended: true
@@ -28,14 +29,19 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 app.use(expressValidator());
 app.use(cookieParser());
-var options = {
-    host: 'localhost',
-    port: 3306,
-    user: 'root',
 
-    password: 'd60061981D',
-    database: 'volorg'
+if (process.env.JAWSDB_URL){
+    var options = process.env.JAWSDB_URL;
+} else{
+var options = {
+    root: 3306,
+    host: "localhost",
+    user: "root",
+    password: process.env.password,
+    database: "volorg",
+
 };
+}
 var sessionStore = new MySQLStore(options);
 app.use(session({
     secret: 'ghfghdf',
