@@ -31,10 +31,8 @@ app.use(expressValidator());
 app.use(cookieParser());
 
 if (process.env.JAWSDB_URL){
-    console.log("jaws")
     var options = process.env.JAWSDB_URL;
 } else{
-    console.log("not jaws")
     var options = {
         root: 3306,
         host: "localhost",
@@ -53,6 +51,7 @@ app.use(session({
     store: sessionStore
     // cookie: { secure: true }
 }));
+console.log("got this far")
 app.use(passport.initialize());
 app.use(passport.session());
 var exphbs = require("express-handlebars");
