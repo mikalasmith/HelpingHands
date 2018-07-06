@@ -334,4 +334,5 @@ a:hover
 
 #mapWrapper{
     position: relative;
+    z-index: 2;
 }
