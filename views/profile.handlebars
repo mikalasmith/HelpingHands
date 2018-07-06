@@ -43,17 +43,14 @@
     {{#each arr}}
     <div class="userEvent">
         <div class="row">
-            <div class="col-sm-2">
+            <div class="col-sm">
                 <h4>{{orgname}}</h4>
             </div>
-            <div class="col-sm-2">
+            <div class="col-sm">
                 <p>{{date}}</p>
             </div>
-            <div class="col-sm-2">
-                <p>{{city}} {{state}}</p>
-            </div>
-            <div class="col-sm-2">
-                <button type="button" class="btn btn-lg signUp greenButton">Your're Signed Up!</button>
+            <div class="col-sm">
+                <p>{{city}}</p><p>{{address}}, {{state}}</p>
             </div>
             <div class="col-sm-4" id="mapWrapper">
                 <button class="btn btn-lg signUp greenButton map" onclick="toggleMap()">Map</button>
