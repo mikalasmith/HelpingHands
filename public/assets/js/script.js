@@ -26,13 +26,13 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-function toggleMap(){
-	var mapBox = document.getElementById("mapBox");
-	if(mapBox.style.opacity == 1){
-		mapBox.style.opacity = 0;
-		mapBox.style.right = "-260px"; // remove it from active screen space
-	} else {
-		mapBox.style.right = "0px"; // return it to active screen space
-		mapBox.style.opacity = 1;
-	}
-}
+// function toggleMap(){
+// 	var mapBox = document.getElementById("mapBox");
+// 	if(mapBox.style.opacity == 1){
+// 		mapBox.style.opacity = 0;
+// 		mapBox.style.right = "-260px"; // remove it from active screen space
+// 	} else {
+// 		mapBox.style.right = "0px"; // return it to active screen space
+// 		mapBox.style.opacity = 1;
+// 	}
+// }

@@ -33,7 +33,7 @@ var options = {
     port: 3306,
     user: 'root',
 
-    password: 'mytime123',
+    password: 'd60061981D',
     database: 'volorg'
 };
 var sessionStore = new MySQLStore(options);
