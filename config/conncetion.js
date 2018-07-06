@@ -7,12 +7,11 @@ if (process.env.JAWSDB_URL){
 }
 else{
 var connection = mysql.createConnection({
+    root: 3306,
     host: "localhost",
-    port: 3306,
     user: "root",
-
-    password: process.env.password, 
-    database:"volorg"
+    password: process.env.password,
+    database: "volorg",
 });
 };
 
