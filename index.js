@@ -34,12 +34,11 @@ if (process.env.JAWSDB_URL){
     var options = process.env.JAWSDB_URL;
 } else{
 var options = {
-    host: 'localhost',
-    port: 3306,
-    user: 'root',
-
+    root: 3306,
+    host: "localhost",
+    user: "root",
     password: process.env.password,
-    database: 'volorg'
+    database: "volorg",
 };
 }
 var sessionStore = new MySQLStore(options);
