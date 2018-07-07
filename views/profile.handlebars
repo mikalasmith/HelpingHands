@@ -27,11 +27,11 @@
             <div class="back">
                 <div class="col-sm-12">
                     <h2>Hello,
-                        <span style="color: #ffbd4a">{{username}}</span>
+                        <span style="color: #ffbd4a">{{this.username}}</span>
                     </h2>
                     <div class="row">
                         <div class="col-6 col-sm-4">
-                            <p>{{email}}</p>
+                            <p>{{this.email}}</p>
                             <!--<a href="./view_all_opportunity.handlebars" class="btn btn-lg volunteerButton">Go Volunteer!</button></a>-->
                         </div>
                     </div>
@@ -47,78 +47,81 @@
             <div class="col-sm-3">
                 <h4>{{orgname}}</h4>
             </div>
-            <div class="col-sm-3">
-                <p>{{date}}</p>
+            <div class="col-sm-2">
+                <p>{{formatDate date day="numeric" month="long" year="numeric"}}</p>
             </div>
 
-            <div class="col-sm-3">
-                <p>{{city}}</p><p>{{address}}, {{state}}</p>
-            </div>            
-            <div class ="col-sm-3" id="mapWrapper">
-        <button class="btn btn-lg signUp greenButton view userMap" data-id="{{id}}" data-address="{{this.address}} {{this.city}} {{this.state}}" type="button" value="Geocode" onclick="toggleMap()">Map</button>
-        {{!-- <div data-address="{{this.address}} class="map dispaynone""> --}}
+            <div class="col-sm-2">
+                <p>{{city}}</p>
+                <p>{{address}}, {{state}}</p>
+            </div>
+            <div class="col-sm-2">
+                <p>{{this.description}}</p>
+            </div>
+            <div class="col-sm-3" id="mapWrapper">
+                <button class="btn btn-lg signUp greenButton view" data-id="{{id}}" data-address="{{this.address}} {{this.city}} {{this.state}}"
+                    type="button" value="Geocode" onclick="toggleMap()">Map</button>
+                {{!--
+                <div data-address="{{this.address}} class=" map dispaynone ""> --}}
+                </div>
+            </div>
         </div>
-        </div>
-
+        {{/each}}
     </div>
-    </div>
-    </div>
-    {{/each}}
 </div>
 
 <script>
     function initMap() {
-    var count = 0;
-    $(".view").on ("click", function(){
-      
-      if(count == 0){
-      var geocoder = new google.maps.Geocoder();
-      var divName = '<div id="mapBox">'
-      var name='mapBox';
-      $(this).closest("div").append($(divName));
-      $("#mapBox").css(
-        "opacity", "1", 
-      )
-      $("#mapBox").css(
-        "right", "0px"
-      )
-      var map = new google.maps.Map(document.getElementById(name), {
-      zoom: 11,
-      center: {lat: 35.2271, lng: -80.8431}
-      //centered on Charlotte NC
-      //});
-      })
-      var address=$(this).data("address");
-      geocodeAddress(geocoder, map, address)
-      count = 1
-      }
-    else
-      {
-        $("#mapBox").remove();
-        count = 0;
-      }
-    })
-   }
+        var count = 0;
+        $(".view").on("click", function () {
 
-  function geocodeAddress(geocoder, resultsMap, address) {
-    //var address = document.getElementById('address').value;
-    geocoder.geocode({'address': address}, function(results, status) {
-      if (status === 'OK') {
-        resultsMap.setCenter(results[0].geometry.location);
-        var marker = new google.maps.Marker({
-          map: resultsMap,
-          position: results[0].geometry.location
+            if (count == 0) {
+                var geocoder = new google.maps.Geocoder();
+                var divName = '<div id="mapBox">'
+                var name = 'mapBox';
+                $(this).closest("div").append($(divName));
+                $("#mapBox").css(
+                    "opacity", "1",
+                )
+                $("#mapBox").css(
+                    "right", "0px"
+                )
+                var map = new google.maps.Map(document.getElementById(name), {
+                    zoom: 11,
+                    center: { lat: 35.2271, lng: -80.8431 }
+                    //centered on Charlotte NC
+                    //});
+                })
+                var address = $(this).data("address");
+                geocodeAddress(geocoder, map, address)
+                count = 1
+            }
+            else {
+                $("#mapBox").remove();
+                count = 0;
+            }
+        })
+    }
+
+    function geocodeAddress(geocoder, resultsMap, address) {
+        //var address = document.getElementById('address').value;
+        geocoder.geocode({ 'address': address }, function (results, status) {
+            if (status === 'OK') {
+                resultsMap.setCenter(results[0].geometry.location);
+                var marker = new google.maps.Marker({
+                    map: resultsMap,
+                    position: results[0].geometry.location
+                });
+            } else {
+                alert('Geocode was not successful for the following reason: ' + status);
+            }
         });
-      } else {
-        alert('Geocode was not successful for the following reason: ' + status);
-      }
-    });
-  }
-$(".hide").on("click", function(){
-  $( "#map2" ).remove();
-  $(".map").addClass("dispaynone")
-})
+    }
+    $(".hide").on("click", function () {
+        $("#map2").remove();
+        $(".map").addClass("dispaynone")
+    })
 
 
-  </script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWPe4weCAWZO2rLMMGIR_Bm-o7y4WmZrs&callback=initMap"></script>
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWPe4weCAWZO2rLMMGIR_Bm-o7y4WmZrs&callback=initMap"></script>
