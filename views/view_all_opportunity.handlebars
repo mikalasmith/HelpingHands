@@ -24,7 +24,7 @@
         <p>{{this.date}}</p>
       </div>
       <div class="col-sm-2">
-        <p>{{this.address}} , {{this.city}} , {{this.state}}</p>
+        <p> {{this.city}}, {{this.address}}, {{this.state}}</p>
       </div>
       <div class="col-sm-2">
         <p>{{this.description}}</p>
@@ -35,13 +35,13 @@
       </div>
       <div class ="col-sm-2" id="mapWrapper">
         <button class="btn btn-lg signUp greenButton view" data-id="{{id}}" data-address="{{this.address}} {{this.city}} {{this.state}}" type="button" value="Geocode" onclick="toggleMap()">Map</button>
-        {{!-- <div data-address="{{this.address}} class="map dispaynone""> --}}
-        </div>
+        {{!-- <div data-address="{{this.address}} class="map dispaynone""></div>--}}
       </div>
 
     </div>
   </div>
   {{/each}}
+
 </div>
 
 <script>
