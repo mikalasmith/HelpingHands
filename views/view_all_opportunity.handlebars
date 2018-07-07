@@ -15,30 +15,34 @@
   </div>
 
   {{#each arr}}
+  <div class="container">
   <div class="event">
     <div class="row">
-      <div class="col-sm-2">
+      <div class="col-sm">
         <h4>{{this.orgname}}</h4>
       </div>
-      <div class="col-sm-2">
+      <div class="col-sm">
         <p>{{formatDate this.date day="numeric" month="long" year="numeric"}}</p>
       </div>
-      <div class="col-sm-2">
+      <div class="col-sm">
         <p> {{this.city}}, {{this.address}}, {{this.state}}</p>
       </div>
-      <div class="col-sm-2">
+      <div class="col-sm">
         <p>{{this.description}}</p>
       </div>
-      <div class="col-sm-2">
+      <div class="col-sm">
         <button type="submit" class="btn btn-lg signUp greenButton signupOpportunity" datat-OpportunityNumber="{{count}}" data-userID="{{user_id}}"
           data-idOpportunity="{{id}}">Sign Up!</button>
       </div>
-      <div class ="col-sm-2" id="mapWrapper">
-        <button class="btn btn-lg signUp greenButton view" data-id="{{id}}" data-address="{{this.address}} {{this.city}} {{this.state}}" type="button" value="Geocode" onclick="toggleMap()">Map</button>
-        {{!-- <div data-address="{{this.address}} class="map dispaynone""></div>--}}
+
+      <div class ="col-sm" id="mapWrapper">
+        <button class="btn btn-lg signUp greenButton vol view mapSignUp" data-id="{{id}}" data-address="{{this.address}} {{this.city}} {{this.state}}" type="button" value="Geocode" onclick="toggleMap()">Map</button>
+        {{!-- <div data-address="{{this.address}} class="map dispaynone""> --}}
+        </div>
       </div>
 
     </div>
+  </div>
   </div>
   {{/each}}
 
