@@ -161,7 +161,7 @@ app.get("/profile", authenticationMiddleware(), function (req, res) {
                     }
                     console.log(result)
                     res.render("profile", {
-                        title: "Here is opportunity that yoou singed up for:",
+                        title: "Here is the opportunity that you signed up for:",
                         arr,
                         username: result[0].username,
                         email: result[0].email
@@ -244,7 +244,7 @@ app.get("/view_all_opportunity", function (req, res) {
 
         }
         res.render("view_all_opportunity", {
-            title: "There You go! That is all we got for You:",
+            title: "Here you go! This is all we've got for you:",
             arr
         })
 
@@ -254,7 +254,7 @@ app.get("/view_all_opportunity", function (req, res) {
 
 app.get("/submit_opportunity", function (req, res) {
     res.render("submit_opportunity", {
-        title: "Go ahead and submit your opportunity"
+        title: "Go ahead and submit your opportunity!"
     })
 })
 app.post("/submit_opportunity", function (req, res) {
@@ -275,14 +275,14 @@ app.post("/submit_opportunity", function (req, res) {
         if (error) throw error
         console.log(result);
         res.render("submit_opportunity", {
-            title: "Your request sent successfully"
+            title: "Your opportunity was submitted successfully"
         })
     })
 })
 
 app.get("/singin", function (req, res) {
     res.render("singin", {
-        title: "Sing in"
+        title: "Sign in"
     })
 })
 app.post("/singin", passport.authenticate("local", {
@@ -296,7 +296,7 @@ app.get("/logout", function (req, res) {
 })
 app.get("/registration", function (req, res) {
     res.render("complete", {
-        title: "Registration completed"
+        title: "Registration complete!"
     })
 })
 
@@ -315,7 +315,7 @@ app.post("/signupOpportunity", function (req, res) {
         if (error) throw error
         console.log(result);
         res.render("profile", {
-            title: "Your request sent successfully"
+            title: "Your opportunity was added successfully"
         })
     })
 
