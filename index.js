@@ -125,7 +125,7 @@ app.get("/singup", function (req, res) {
 app.get("/profile", authenticationMiddleware(), function (req, res) {
     const id = req.user.user_id;
     // var query = "SELECT * FROM users WHERE user_id=" + id;
-    var query = "SELECT users.username, users.email, opportunities.orgname, opportunities.orgname, opportunities.date, opportunities.numvol, opportunities.city, opportunities.address, opportunities.state, opportunities.zipcode, opportunities.description FROM users INNER JOIN opportunities ON users.user_id=opportunities.user_id WHERE users.user_id=3";
+    var query = "SELECT users.username, users.email, opportunities.orgname, opportunities.orgname, opportunities.date, opportunities.numvol, opportunities.city, opportunities.address, opportunities.state, opportunities.zipcode, opportunities.description FROM users INNER JOIN opportunities ON users.user_id=opportunities.user_id WHERE users.user_id=" + id;
 
     connection.query(query, function (error, result) {
         if (error) throw error
