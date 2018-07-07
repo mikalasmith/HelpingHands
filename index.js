@@ -53,6 +53,9 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 var exphbs = require("express-handlebars");
+var Handlebars     = require('handlebars');
+var HandlebarsIntl = require('handlebars-intl');
+HandlebarsIntl.registerWith(Handlebars);
 app.engine("handlebars", exphbs({
     defaultLayout: "main"
 }));
